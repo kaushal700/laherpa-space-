@@ -20,19 +20,19 @@ const Navbar = () => {
     <nav 
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white shadow-elegant border-b border-primary/10"
     >
-      <div className="container mx-auto px-4 py-3">
+      <div className="max-w-7xl mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link 
-            to="/" 
-            className="flex items-center gap-2 group"
-          >
+  to="/" 
+  className="flex items-center gap-1 group"
+>
             <img 
               src={logoIcon} 
               alt="La Herpaile Logo" 
-              className="w-12 h-12 object-contain group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 drop-shadow-lg"
+              className="w-20 h-20 object-contain group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 drop-shadow-lg"
             />
-            <span className="font-display text-xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+            <span className="font-display text-3xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
               La Herpaile
             </span>
           </Link>

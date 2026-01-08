@@ -96,7 +96,7 @@ const Volunteer = () => {
         <FloatingParticles />
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20">
+        <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-32">
           {/* Animated Badge */}
           <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full glass-card mb-6 animate-fade-up">
             <Sparkles className="w-4 h-4 text-golden animate-pulse" />
@@ -127,6 +127,7 @@ const Volunteer = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up"
             style={{ animationDelay: "0.3s" }}
           >
+            <Link to="/server-info">
             <Button 
               variant="hero" 
               size="xl" 
@@ -137,6 +138,7 @@ const Volunteer = () => {
                 <Heart className="w-5 h-5 group-hover:animate-wiggle" />
               </span>
             </Button>
+            </Link>
             <Button 
               variant="heroOutline" 
               size="xl"
@@ -347,6 +349,7 @@ const Volunteer = () => {
                 <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
                   <span className="text-primary">Join us</span> in creating a stronger, more connected, and empowered <span className="text-accent">world</span>. Together, we can make <span className="text-primary">digital</span> empowerment a reality.
                 </p>
+                <Link to="/server-info">
                 <Button 
                   size="lg"
                   className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground px-10 py-6 text-lg rounded-xl shadow-glow hover:shadow-xl transition-all duration-300 hover:scale-105"
@@ -354,6 +357,7 @@ const Volunteer = () => {
                   Apply Now
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
+                </Link>
               </div>
             </div>
 

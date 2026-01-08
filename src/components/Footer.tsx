@@ -65,18 +65,20 @@ const Footer = () => {
       </div>
 
       {/* Main Footer */}
-      <div className="relative z-10 container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 mb-12">
+      <div className="relative z-10 container mx-auto px-4 py-16 lg:pl-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 mb-12">
           {/* Brand */}
-          <div className="md:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-3 mb-6">
+          <div className="lg:col-span-1">
+            <Link to="/" className="flex items-center gap-2 mb-6 group">
               <img 
                 src={logoIcon} 
                 alt="La Herpaile Logo" 
-                className="w-20 h-20 object-contain drop-shadow-lg hover:scale-110 hover:rotate-6 transition-all duration-500"
+                className="w-20 h-20 object-contain drop-shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500"
               />
-              <span className="font-display text-2xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">La Herpaile</span>
-            </div>
+              <span className="font-display text-3xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+                La Herpaile
+              </span>
+            </Link>
             <p className="text-primary-foreground/70 text-sm mb-6 leading-relaxed max-w-sm">
               La Herpaile is a dedicated animal welfare 
               organization committed to rescuing, rehabilitating, and rehoming animals in need.
@@ -95,51 +97,55 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-display text-lg font-semibold mb-6 flex items-center gap-2">
-              <div className="w-8 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full" />
-              Quick Links
-            </h4>
-            <ul className="space-y-4">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-primary-foreground/70 hover:text-primary transition-colors duration-300 text-sm flex items-center gap-2 group"
-                  >
-                    <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Quick Links & Useful Links - Side by side on mobile */}
+          <div className="grid grid-cols-2 gap-8 lg:col-span-2 lg:grid-cols-2">
+            {/* Quick Links */}
+            <div>
+              <h4 className="font-display text-lg font-semibold mb-6 flex items-center gap-2">
+                <div className="w-8 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full" />
+                Quick Links
+              </h4>
+              <ul className="space-y-4">
+                {quickLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      className="text-primary-foreground/70 hover:text-primary transition-colors duration-300 text-sm flex items-center gap-2 group"
+                    >
+                      <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Useful Links */}
-          <div>
-            <h4 className="font-display text-lg font-semibold mb-6 flex items-center gap-2">
-              <div className="w-8 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full" />
-              Useful Links
-            </h4>
-            <ul className="space-y-4">
-              {usefulLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-primary-foreground/70 hover:text-primary transition-colors duration-300 text-sm flex items-center gap-2 group"
-                  >
-                    <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {/* Useful Links */}
+            <div>
+              <h4 className="font-display text-lg font-semibold mb-6 flex items-center gap-2">
+                <div className="w-8 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full" />
+                Useful Links
+              </h4>
+              <ul className="space-y-4">
+                {usefulLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      className="text-primary-foreground/70 hover:text-primary transition-colors duration-300 text-sm flex items-center gap-2 group"
+                    >
+                      <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-primary-foreground/10 pt-8 flex items-center justify-center">
+
           <p className="text-primary-foreground/50 text-sm flex items-center gap-2">
             © {new Date().getFullYear()} La Herpaile. All rights reserved.
           </p>

@@ -41,7 +41,7 @@ const Hero = () => {
       <Zap className="absolute top-[40%] left-[10%] w-5 h-5 text-accent/30 floating-fast" />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20">
+      <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-32">
         {/* Animated Badge */}
         <div className="inline-flex items-center gap-3 px-8 py-3 rounded-full glass-card mb-8 animate-fade-up border border-primary-foreground/20 shadow-2xl">
           <Sparkles className="w-5 h-5 text-golden animate-pulse" />

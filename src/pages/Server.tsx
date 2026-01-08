@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Sprout, GraduationCap, Globe, Users, Heart, CheckCircle, AlertCircle, ArrowRight, Server as ServerIcon, Zap, Shield, ChevronDown, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import FloatingParticles from "@/components/FloatingParticles";
-import serverEducation from "@/assets/server-education.jpg";
-import serverNgo from "@/assets/server-ngo.jpg";
+import serverEducation from "@/assets/server-educations.png";
+import serverNgo from "@/assets/server-ngo.png";
 import serverWomenYouth from "@/assets/server-women-youth.jpg";
 import serverHero from "@/assets/server-hero-new.jpg";
 
@@ -46,7 +46,7 @@ const Server = () => {
       icon: Heart,
       title: "Women & Youth",
       description: "Women-led or youth-focused initiatives.",
-      image: serverWomenYouth
+      image: serverWomenYouth,
     }
   ];
 
@@ -94,9 +94,9 @@ const Server = () => {
         <FloatingParticles />
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20">
+        <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-32">
           {/* Animated Badge */}
-          <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full glass-card mb-6 animate-fade-up">
+          <div className="inline-flex items-center gap-3 px-8 py-3 rounded-full glass-card mb-6 animate-fade-up">
             <Sparkles className="w-4 h-4 text-golden animate-pulse" />
             <span className="text-sm font-medium tracking-widest uppercase opacity-90">
               La Herpaille Server Initiative

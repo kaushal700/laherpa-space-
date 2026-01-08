@@ -410,7 +410,7 @@ const OurWork = () => {
                 <Button 
                   variant="heroOutline"
                   size="xl"
-                  className="group backdrop-blur-md hover:backdrop-blur-lg transition-all duration-500 border-2 shadow-xl"
+                  className="group relative overflow-hidden btn-ripple glow-primary shadow-2xl"
                 >
                   <Users className="w-5 h-5 mr-2" />
                   Join Us
