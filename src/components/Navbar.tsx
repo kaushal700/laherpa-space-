@@ -1,15 +1,31 @@
 import { useState } from "react";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X, Heart, ChevronDown, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import logoIcon from "@/assets/logo-icon.png";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [mobileServerOpen, setMobileServerOpen] = useState(false);
+
+  const serverLocations = [
+    { name: "🌏 USA", href: "/server/usa" },
+    { name: "🌏 Asia Pacific", href: "/server/asia-pacific" },
+    { name: "🌏 India", href: "/server/india" },
+    { name: "🌏 Europe", href: "/server/europe" },
+    { name: "🌍 Middle East", href: "/server/middle-east" },
+    { name: "🌎 South America", href: "/server/south-america" },
+    { name: "🌍 Africa", href: "/server/africa" },
+  ];
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Server", href: "/server" },
     { name: "About Us", href: "/about" },
     { name: "Initiatives", href: "/initiatives" },
     { name: "Volunteer", href: "/volunteer" },
@@ -24,9 +40,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link 
-  to="/" 
-  className="flex items-center gap-1 group"
->
+            to="/" 
+            className="flex items-center gap-2 group"
+          >
             <img 
               src={logoIcon} 
               alt="La Herpaile Logo" 
@@ -40,7 +56,44 @@ const Navbar = () => {
           {/* Desktop Menu - Centered */}
           <div className="hidden md:flex items-center justify-center flex-1">
             <div className="flex items-center gap-1 bg-gradient-to-r from-primary/5 via-accent/5 to-secondary/5 rounded-full px-2 py-1 border border-primary/10">
-              {navLinks.map((link) => (
+              {navLinks.slice(0, 1).map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="relative px-5 py-2 text-base font-extrabold transition-all duration-300 rounded-full hover:bg-primary/10 text-muted-foreground hover:text-primary"
+                >
+                  {link.name}
+                </Link>
+              ))}
+              
+              {/* Server Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className="relative px-5 py-2 text-base font-extrabold transition-all duration-300 rounded-full hover:bg-primary/10 text-muted-foreground hover:text-primary flex items-center gap-1 outline-none">
+                    Server
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent 
+                  align="center" 
+                  className="w-56 bg-white border border-primary/10 shadow-xl z-[100] p-2"
+                  sideOffset={8}
+                >
+                  {serverLocations.map((location) => (
+                    <DropdownMenuItem key={location.name} asChild>
+                      <Link
+                        to={location.href}
+                        className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10 cursor-pointer transition-all duration-300 font-semibold text-foreground hover:text-primary"
+                      >
+                        
+                        {location.name}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              {navLinks.slice(1).map((link) => (
                 <Link
                   key={link.name}
                   to={link.href}
@@ -78,11 +131,48 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div 
         className={`md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg overflow-hidden transition-all duration-500 border-b border-primary/10 ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="container mx-auto px-4 py-6 flex flex-col gap-2">
-          {navLinks.map((link) => (
+          <Link
+            to="/"
+            onClick={() => setIsOpen(false)}
+            className="text-muted-foreground hover:text-primary font-bold py-3 px-4 rounded-lg hover:bg-primary/10 transition-all duration-300"
+          >
+            Home
+          </Link>
+          
+          {/* Mobile Server Dropdown */}
+          <div>
+            <button
+              onClick={() => setMobileServerOpen(!mobileServerOpen)}
+              className="w-full flex items-center justify-between text-muted-foreground hover:text-primary font-bold py-3 px-4 rounded-lg hover:bg-primary/10 transition-all duration-300"
+            >
+              Server
+              <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${mobileServerOpen ? 'rotate-180' : ''}`} />
+            </button>
+            <div className={`overflow-hidden transition-all duration-300 ${mobileServerOpen ? 'max-h-96' : 'max-h-0'}`}>
+              <div className="pl-4 flex flex-col gap-1 mt-2">
+                {serverLocations.map((location) => (
+                  <Link
+                    key={location.name}
+                    to={location.href}
+                    onClick={() => {
+                      setIsOpen(false);
+                      setMobileServerOpen(false);
+                    }}
+                    className="flex items-center gap-3 text-muted-foreground hover:text-primary font-semibold py-2 px-4 rounded-lg hover:bg-primary/10 transition-all duration-300"
+                  >
+                    
+                    {location.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {navLinks.slice(1).map((link) => (
             <Link
               key={link.name}
               to={link.href}

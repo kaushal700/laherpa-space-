@@ -28,6 +28,13 @@ const ScrollToTop = () => {
 import NotFound from "./pages/NotFound";
 import Server from "./pages/Server";
 import ServerInfo from "./pages/ServerInfo";
+import ServerUSA from "./pages/ServerUSA";
+import ServerAsiaPacific from "./pages/ServerAsiaPacific";
+import ServerIndia from "./pages/ServerIndia";
+import ServerEurope from "./pages/ServerEurope";
+import ServerMiddleEast from "./pages/ServerMiddleEast";
+import ServerSouthAmerica from "./pages/ServerSouthAmerica";
+import ServerAfrica from "./pages/ServerAfrica";
 import AboutUs from "./pages/AboutUs";
 import Initiatives from "./pages/Initiatives";
 import Volunteer from "./pages/Volunteer";
@@ -50,6 +57,13 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/server" element={<Server />} />
           <Route path="/server-info" element={<ServerInfo />} />
+          <Route path="/server/usa" element={<ServerUSA />} />
+          <Route path="/server/asia-pacific" element={<ServerAsiaPacific />} />
+          <Route path="/server/india" element={<ServerIndia />} />
+          <Route path="/server/europe" element={<ServerEurope />} />
+          <Route path="/server/middle-east" element={<ServerMiddleEast />} />
+          <Route path="/server/south-america" element={<ServerSouthAmerica />} />
+          <Route path="/server/africa" element={<ServerAfrica />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/initiatives" element={<Initiatives />} />
           <Route path="/volunteer" element={<Volunteer />} />
