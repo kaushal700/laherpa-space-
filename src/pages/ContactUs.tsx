@@ -13,26 +13,26 @@ const ContactUs = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
+
       {/* Hero Section - Full Screen Like About Us */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image with Parallax Effect */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src={contactHero} 
-            alt="Contact our team" 
+          <img
+            src={contactHero}
+            alt="Contact our team"
             className="w-full h-full object-cover scale-110 animate-[scale-in_1.5s_ease-out_forwards]"
           />
           {/* Multi-layer Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/30 to-foreground/80" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-transparent to-accent/20" />
-          
+
           {/* Animated Mesh Gradient */}
           <div className="absolute inset-0 opacity-40">
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary/40 via-transparent to-transparent animate-pulse" />
             <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-accent/30 via-transparent to-transparent animate-pulse" style={{ animationDelay: "1.5s" }} />
           </div>
-          
+
           {/* Animated Glow Orbs */}
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-primary/30 to-accent/20 rounded-full blur-[120px] animate-pulse" />
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-l from-secondary/30 to-golden/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: "1s" }} />
@@ -45,14 +45,14 @@ const ContactUs = () => {
         <div className="absolute bottom-32 left-16 w-12 h-12 bg-gradient-to-br from-primary/40 to-secondary/30 rounded-full floating-fast" />
         <div className="absolute top-1/3 right-1/4 w-6 h-6 bg-golden/50 rounded-full floating animate-pulse" />
         <div className="absolute bottom-1/4 left-1/3 w-4 h-4 bg-accent/40 rounded-full floating-slow" />
-        
+
         {/* Floating Stars */}
         <Star className="absolute top-1/4 right-[20%] w-6 h-6 text-golden/40 floating-slow animate-pulse" />
         <Star className="absolute bottom-1/3 left-[15%] w-4 h-4 text-primary-foreground/30 floating" />
         <Zap className="absolute top-[40%] left-[10%] w-5 h-5 text-accent/30 floating-fast" />
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20">
+        <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-32">
           {/* Animated Badge */}
           <div className="inline-flex items-center gap-3 px-8 py-3 rounded-full glass-card mb-8 animate-fade-up border border-primary-foreground/20 shadow-2xl">
             <Sparkles className="w-5 h-5 text-golden animate-pulse" />
@@ -62,7 +62,7 @@ const ContactUs = () => {
             <Sparkles className="w-5 h-5 text-golden animate-pulse" />
           </div>
 
-          <h1 
+          <h1
             className="font-display text-5xl md:text-7xl lg:text-9xl font-black mb-8 animate-fade-up tracking-tight"
             style={{ animationDelay: "0.1s" }}
           >
@@ -72,16 +72,16 @@ const ContactUs = () => {
             </span>
           </h1>
 
-          <p 
+          <p
             className="max-w-2xl mx-auto text-lg md:text-xl opacity-90 mb-12 font-light animate-fade-up leading-relaxed text-primary-foreground/90"
             style={{ animationDelay: "0.2s" }}
           >
-            We'd love to hear from you! Reach out and 
+            We'd love to hear from you! Reach out and
             we'll respond promptly.
           </p>
 
           {/* Stats Preview */}
-          <div 
+          <div
             className="mt-10 grid grid-cols-3 gap-6 max-w-xl mx-auto animate-fade-up"
             style={{ animationDelay: "0.5s" }}
           >
@@ -90,8 +90,8 @@ const ContactUs = () => {
               { number: "24/7", label: "Support", icon: "💬" },
               { number: "100%", label: "Satisfaction", icon: "❤️" },
             ].map((stat) => (
-              <div 
-                key={stat.label} 
+              <div
+                key={stat.label}
                 className="group text-center p-4 rounded-2xl glass-card hover:bg-primary-foreground/10 transition-all duration-500 cursor-pointer hover:scale-105 border border-primary-foreground/10"
               >
                 <div className="text-2xl mb-2 group-hover:animate-bounce-soft">{stat.icon}</div>
@@ -115,10 +115,10 @@ const ContactUs = () => {
         {/* Background Decorations */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[150px]" />
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent/5 rounded-full blur-[120px]" />
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto">
-            
+
             {/* Get In Touch */}
             <div className="text-center mb-12">
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
@@ -141,8 +141,8 @@ const ContactUs = () => {
                   </div>
                   <div>
                     <span className="font-semibold text-foreground block">Email</span>
-                    <a 
-                      href="mailto:support@laherpa.space" 
+                    <a
+                      href="mailto:support@laherpa.space"
                       className="text-primary hover:text-accent underline underline-offset-4 transition-colors"
                     >
                       support@laherpa.space
@@ -155,8 +155,8 @@ const ContactUs = () => {
                   </div>
                   <div>
                     <span className="font-semibold text-foreground block">Phone</span>
-                    <a 
-                      href="tel:+919315260977" 
+                    <a
+                      href="tel:+919315260977"
                       className="text-primary hover:text-accent underline underline-offset-4 transition-colors"
                     >
                       +91 9315260977
@@ -179,51 +179,51 @@ const ContactUs = () => {
                   Send Us <span className="bg-gradient-to-r from-golden to-accent bg-clip-text text-transparent">Message</span>
                 </h3>
               </div>
-              
+
               <form className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Name <span className="text-muted-foreground">(required)</span>
                   </label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     required
                     className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all duration-300"
                   />
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Email <span className="text-muted-foreground">(required)</span>
                   </label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     required
                     className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all duration-300"
                   />
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Website
                   </label>
-                  <input 
-                    type="url" 
+                  <input
+                    type="url"
                     className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all duration-300"
                   />
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Message
                   </label>
-                  <textarea 
+                  <textarea
                     rows={5}
                     className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all duration-300 resize-y"
                   />
                 </div>
-                
-                <Button 
+
+                <Button
                   type="submit"
                   variant="hero"
                   size="xl"
@@ -235,7 +235,7 @@ const ContactUs = () => {
                   </span>
                 </Button>
               </form>
-              
+
               <p className="text-center text-muted-foreground text-sm mt-4">
                 Your message will be reviewed by our team and we'll get back to you as soon as possible.
               </p>
@@ -254,22 +254,22 @@ const ContactUs = () => {
               <p className="text-muted-foreground mb-8">
                 Want to make a bigger impact? You can volunteer, donate, or share our work with your network. Every action <span className="text-primary">helps us</span> empower <span className="text-accent">communities</span> and change lives.
               </p>
-              
+
               <div className="flex flex-wrap justify-center gap-8">
-                <Link 
-                  to="/donate" 
+                <Link
+                  to="/donate"
                   className="text-foreground hover:text-primary underline underline-offset-4 transition-colors font-medium"
                 >
                   Donate Now →
                 </Link>
-                <Link 
-                  to="/volunteer" 
+                <Link
+                  to="/volunteer"
                   className="text-foreground hover:text-primary underline underline-offset-4 transition-colors font-medium"
                 >
                   Volunteer With Us
                 </Link>
-                <Link 
-                  to="/our-work" 
+                <Link
+                  to="/our-work"
                   className="text-foreground hover:text-primary underline underline-offset-4 transition-colors font-medium"
                 >
                   Learn More About Our Work

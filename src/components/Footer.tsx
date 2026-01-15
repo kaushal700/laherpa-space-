@@ -29,34 +29,34 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-foreground text-primary-foreground relative overflow-hidden">
+    <footer className="bg-gradient-to-r from-primary via-accent to-primary text-black relative overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[150px]" />
-        <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] bg-accent/10 rounded-full blur-[120px]" />
+        <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-red-900/10 rounded-full blur-[150px]" />
+        <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] bg-yellow-900/10 rounded-full blur-[120px]" />
       </div>
 
       {/* Newsletter Section */}
-      <div className="relative z-10 border-b border-primary-foreground/10">
+      <div className="relative z-10 border-b border-black/10">
         <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto glass-dark rounded-3xl p-8 md:p-12">
+          <div className="max-w-4xl mx-auto glass-dark rounded-3xl p-8 md:p-12 border border-black/10 hover:border-black/20 transition-colors duration-500">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="font-display text-2xl md:text-3xl font-bold mb-3">
+                <h3 className="font-display text-2xl md:text-3xl font-bold mb-3 text-black">
                   Stay Connected with Us
                 </h3>
-                <p className="text-primary-foreground/70">
+                <p className="text-black/80 leading-relaxed text-lg">
                   Get updates on rescued animals, events, and ways to help.
                 </p>
               </div>
-              <div className="flex gap-3">
+              <div className="flex gap-3 relative group">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-grow px-5 py-3 rounded-xl bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-primary transition-colors"
+                  className="w-full px-5 py-3 rounded-xl bg-white/20 border border-black/10 text-black placeholder:text-black/50 focus:outline-none focus:border-black/50 focus:bg-white/30 transition-all duration-300 pr-16 text-lg"
                 />
-                <Button variant="hero" className="px-6 group">
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <Button variant="hero" className="absolute right-1 top-1 bottom-1 px-4 !rounded-lg hover:scale-105 active:scale-95 transition-all duration-300">
+                  <ArrowRight className="w-5 h-5 text-white" />
                 </Button>
               </div>
             </div>
@@ -66,21 +66,24 @@ const Footer = () => {
 
       {/* Main Footer */}
       <div className="relative z-10 container mx-auto px-4 py-16 lg:pl-20">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 mb-16">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center gap-2 mb-6 group">
-              <img 
-                src={logoIcon} 
-                alt="La Herpaile Logo" 
-                className="w-20 h-20 object-contain drop-shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500"
-              />
-              <span className="font-display text-3xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+            <Link to="/" className="flex items-center gap-3 mb-6 group w-fit">
+              <div className="relative">
+                <div className="absolute inset-0 bg-black/5 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <img
+                  src={logoIcon}
+                  alt="La Herpaile Logo"
+                  className="w-16 h-16 object-contain relative z-10 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500"
+                />
+              </div>
+              <span className="font-display text-2xl md:text-3xl font-bold text-black">
                 La Herpaile
               </span>
             </Link>
-            <p className="text-primary-foreground/70 text-sm mb-6 leading-relaxed max-w-sm">
-              La Herpaile is a dedicated animal welfare 
+            <p className="text-black/80 text-base mb-8 leading-relaxed max-w-sm font-medium">
+              La Herpaile is a dedicated animal welfare
               organization committed to rescuing, rehabilitating, and rehoming animals in need.
             </p>
             <div className="flex gap-3">
@@ -89,20 +92,20 @@ const Footer = () => {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-10 h-10 rounded-xl bg-primary-foreground/10 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 hover:shadow-glow-sm"
+                  className="w-12 h-12 rounded-xl bg-black/5 border border-black/5 flex items-center justify-center text-black/70 hover:text-white hover:bg-black hover:border-black hover:-translate-y-1 transition-all duration-300"
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="w-6 h-6" />
                 </a>
               ))}
             </div>
           </div>
 
           {/* Quick Links & Useful Links - Side by side on mobile */}
-          <div className="grid grid-cols-2 gap-8 lg:col-span-2 lg:grid-cols-2">
+          <div className="grid grid-cols-2 gap-8 lg:col-span-2 lg:grid-cols-2 lg:pl-12">
             {/* Quick Links */}
             <div>
-              <h4 className="font-display text-lg font-semibold mb-6 flex items-center gap-2">
-                <div className="w-8 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full" />
+              <h4 className="font-display text-xl font-bold mb-6 flex items-center gap-3 text-black">
+                <span className="w-8 h-1 bg-black rounded-full" />
                 Quick Links
               </h4>
               <ul className="space-y-4">
@@ -110,9 +113,9 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className="text-primary-foreground/70 hover:text-primary transition-colors duration-300 text-sm flex items-center gap-2 group"
+                      className="text-black/70 hover:text-black hover:translate-x-1 transition-all duration-300 text-lg flex items-center gap-2 group w-fit font-medium"
                     >
-                      <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                      <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-black" />
                       {link.name}
                     </Link>
                   </li>
@@ -122,8 +125,8 @@ const Footer = () => {
 
             {/* Useful Links */}
             <div>
-              <h4 className="font-display text-lg font-semibold mb-6 flex items-center gap-2">
-                <div className="w-8 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full" />
+              <h4 className="font-display text-xl font-bold mb-6 flex items-center gap-3 text-black">
+                <span className="w-8 h-1 bg-black rounded-full" />
                 Useful Links
               </h4>
               <ul className="space-y-4">
@@ -131,9 +134,9 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className="text-primary-foreground/70 hover:text-primary transition-colors duration-300 text-sm flex items-center gap-2 group"
+                      className="text-black/70 hover:text-black hover:translate-x-1 transition-all duration-300 text-lg flex items-center gap-2 group w-fit font-medium"
                     >
-                      <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                      <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-black" />
                       {link.name}
                     </Link>
                   </li>
@@ -144,13 +147,12 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-primary-foreground/10 pt-8 flex items-center justify-center">
-
-          <p className="text-primary-foreground/50 text-sm flex items-center gap-2">
+        <div className="border-t border-black/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-black/60 text-base text-center md:text-left font-medium">
             © {new Date().getFullYear()} La Herpaile. All rights reserved.
           </p>
-          <p className="text-primary-foreground/50 text-sm flex items-center gap-2">
-            Made with <Heart className="w-4 h-4 text-primary animate-heartbeat" /> for animals
+          <p className="text-black/60 text-base flex items-center gap-1.5 align-middle font-medium">
+            Made with <Heart className="w-5 h-5 text-black animate-heartbeat fill-black" /> for animals
           </p>
         </div>
       </div>

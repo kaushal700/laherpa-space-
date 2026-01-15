@@ -23,7 +23,7 @@ const ServerInfo = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!formData.name.trim() || !formData.email.trim() || !formData.country.trim() || !formData.phone.trim()) {
       toast({
@@ -68,26 +68,26 @@ const ServerInfo = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
+
       {/* Hero Section - Full Screen Like About Us Page */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image with Parallax Effect */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src={serverInfoHero} 
-            alt="Team collaborating with technology" 
+          <img
+            src={serverInfoHero}
+            alt="Team collaborating with technology"
             className="w-full h-full object-cover scale-110 animate-[scale-in_1.5s_ease-out_forwards]"
           />
           {/* Multi-layer Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/30 to-foreground/80" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-transparent to-accent/20" />
-          
+
           {/* Animated Mesh Gradient */}
           <div className="absolute inset-0 opacity-40">
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary/40 via-transparent to-transparent animate-pulse" />
             <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-accent/30 via-transparent to-transparent animate-pulse" style={{ animationDelay: "1.5s" }} />
           </div>
-          
+
           {/* Animated Glow Orbs */}
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-primary/30 to-accent/20 rounded-full blur-[120px] animate-pulse" />
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-l from-secondary/30 to-golden/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: "1s" }} />
@@ -100,14 +100,14 @@ const ServerInfo = () => {
         <div className="absolute bottom-32 left-16 w-12 h-12 bg-gradient-to-br from-primary/40 to-secondary/30 rounded-full floating-fast" />
         <div className="absolute top-1/3 right-1/4 w-6 h-6 bg-golden/50 rounded-full floating animate-pulse" />
         <div className="absolute bottom-1/4 left-1/3 w-4 h-4 bg-accent/40 rounded-full floating-slow" />
-        
+
         {/* Floating Stars */}
         <Star className="absolute top-1/4 right-[20%] w-6 h-6 text-golden/40 floating-slow animate-pulse" />
         <Star className="absolute bottom-1/3 left-[15%] w-4 h-4 text-primary-foreground/30 floating" />
         <Zap className="absolute top-[40%] left-[10%] w-5 h-5 text-accent/30 floating-fast" />
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20">
+        <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-32">
           {/* Animated Badge */}
           <div className="inline-flex items-center gap-3 px-8 py-3 rounded-full glass-card mb-8 animate-fade-up border border-primary-foreground/20 shadow-2xl">
             <Sparkles className="w-5 h-5 text-golden animate-pulse" />
@@ -117,7 +117,7 @@ const ServerInfo = () => {
             <Sparkles className="w-5 h-5 text-golden animate-pulse" />
           </div>
 
-          <h1 
+          <h1
             className="font-display text-5xl md:text-7xl lg:text-9xl font-black mb-8 animate-fade-up tracking-tight"
             style={{ animationDelay: "0.1s" }}
           >
@@ -127,16 +127,16 @@ const ServerInfo = () => {
             </span>
           </h1>
 
-          <p 
+          <p
             className="max-w-2xl mx-auto text-lg md:text-xl opacity-90 mb-12 font-light animate-fade-up leading-relaxed text-primary-foreground/90"
             style={{ animationDelay: "0.2s" }}
           >
-            Empowering communities through free digital access and technology resources. 
+            Empowering communities through free digital access and technology resources.
             Apply now to get your free RDP server access.
           </p>
 
           {/* Stats Preview */}
-          <div 
+          <div
             className="mt-10 grid grid-cols-3 gap-6 max-w-xl mx-auto animate-fade-up"
             style={{ animationDelay: "0.5s" }}
           >
@@ -145,8 +145,8 @@ const ServerInfo = () => {
               { number: "500+", label: "Students Helped", icon: "🎓" },
               { number: "24/7", label: "Support", icon: "⚡" },
             ].map((stat) => (
-              <div 
-                key={stat.label} 
+              <div
+                key={stat.label}
                 className="group text-center p-4 rounded-2xl glass-card hover:bg-primary-foreground/10 transition-all duration-500 cursor-pointer hover:scale-105 border border-primary-foreground/10"
               >
                 <div className="text-2xl mb-2 group-hover:animate-bounce-soft">{stat.icon}</div>
@@ -172,15 +172,15 @@ const ServerInfo = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              
+
               {/* Left Side - Image and Benefits */}
               <div className="space-y-8 animate-fade-in">
                 {/* Featured Image */}
                 <div className="relative rounded-3xl overflow-hidden shadow-elegant group">
                   <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 to-accent/30 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-60" />
-                  <img 
-                    src={serverInfoStudent} 
-                    alt="Student using laptop" 
+                  <img
+                    src={serverInfoStudent}
+                    alt="Student using laptop"
                     className="relative w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700 rounded-2xl"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent rounded-2xl" />
@@ -195,7 +195,7 @@ const ServerInfo = () => {
                 {/* Benefits List */}
                 <div className="space-y-4">
                   {benefits.map((benefit, index) => (
-                    <div 
+                    <div
                       key={index}
                       className="flex items-center gap-4 p-4 rounded-xl glass-card border border-border/50 hover:border-primary/30 hover:shadow-card transition-all duration-300 group"
                       style={{ animationDelay: `${0.2 + index * 0.1}s` }}
@@ -303,7 +303,7 @@ const ServerInfo = () => {
                       />
                     </div>
 
-                    <Button 
+                    <Button
                       type="submit"
                       variant="hero"
                       size="lg"

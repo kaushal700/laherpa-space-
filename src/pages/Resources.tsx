@@ -36,26 +36,26 @@ const Resources = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
+
       {/* Hero Section - Full Screen Like About Us */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image with Parallax Effect */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src={resourcesHero} 
-            alt="Resources and RDP Servers" 
+          <img
+            src={resourcesHero}
+            alt="Resources and RDP Servers"
             className="w-full h-full object-cover scale-110 animate-[scale-in_1.5s_ease-out_forwards]"
           />
           {/* Multi-layer Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/30 to-foreground/80" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-transparent to-accent/20" />
-          
+
           {/* Animated Mesh Gradient */}
           <div className="absolute inset-0 opacity-40">
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary/40 via-transparent to-transparent animate-pulse" />
             <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-accent/30 via-transparent to-transparent animate-pulse" style={{ animationDelay: "1.5s" }} />
           </div>
-          
+
           {/* Animated Glow Orbs */}
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-primary/30 to-accent/20 rounded-full blur-[120px] animate-pulse" />
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-l from-secondary/30 to-golden/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: "1s" }} />
@@ -68,14 +68,14 @@ const Resources = () => {
         <div className="absolute bottom-32 left-16 w-12 h-12 bg-gradient-to-br from-primary/40 to-secondary/30 rounded-full floating-fast" />
         <div className="absolute top-1/3 right-1/4 w-6 h-6 bg-golden/50 rounded-full floating animate-pulse" />
         <div className="absolute bottom-1/4 left-1/3 w-4 h-4 bg-accent/40 rounded-full floating-slow" />
-        
+
         {/* Floating Stars */}
         <Star className="absolute top-1/4 right-[20%] w-6 h-6 text-golden/40 floating-slow animate-pulse" />
         <Star className="absolute bottom-1/3 left-[15%] w-4 h-4 text-primary-foreground/30 floating" />
         <Zap className="absolute top-[40%] left-[10%] w-5 h-5 text-accent/30 floating-fast" />
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20">
+        <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-32">
           {/* Animated Badge */}
           <div className="inline-flex items-center gap-3 px-8 py-3 rounded-full glass-card mb-8 animate-fade-up border border-primary-foreground/20 shadow-2xl">
             <Server className="w-5 h-5 text-golden animate-pulse" />
@@ -85,7 +85,7 @@ const Resources = () => {
             <Server className="w-5 h-5 text-golden animate-pulse" />
           </div>
 
-          <h1 
+          <h1
             className="font-display text-5xl md:text-7xl lg:text-9xl font-black mb-8 animate-fade-up tracking-tight"
             style={{ animationDelay: "0.1s" }}
           >
@@ -95,16 +95,16 @@ const Resources = () => {
             </span>
           </h1>
 
-          <p 
+          <p
             className="max-w-2xl mx-auto text-lg md:text-xl opacity-90 mb-12 font-light animate-fade-up leading-relaxed text-primary-foreground/90"
             style={{ animationDelay: "0.2s" }}
           >
-            Unlock the power of remote desktop access. 
+            Unlock the power of remote desktop access.
             Connect securely to a computer anywhere in the world.
           </p>
 
           {/* Stats Preview */}
-          <div 
+          <div
             className="mt-10 grid grid-cols-3 gap-6 max-w-xl mx-auto animate-fade-up"
             style={{ animationDelay: "0.5s" }}
           >
@@ -113,8 +113,8 @@ const Resources = () => {
               { number: "24/7", label: "Support", icon: "💬" },
               { number: "100%", label: "Secure", icon: "🔒" },
             ].map((stat) => (
-              <div 
-                key={stat.label} 
+              <div
+                key={stat.label}
                 className="group text-center p-4 rounded-2xl glass-card hover:bg-primary-foreground/10 transition-all duration-500 cursor-pointer hover:scale-105 border border-primary-foreground/10"
               >
                 <div className="text-2xl mb-2 group-hover:animate-bounce-soft">{stat.icon}</div>
@@ -137,7 +137,7 @@ const Resources = () => {
       <section className="py-20 bg-gradient-to-b from-background via-card to-background relative overflow-hidden">
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[150px]" />
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent/5 rounded-full blur-[120px]" />
-        
+
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 mb-6">
@@ -161,22 +161,22 @@ const Resources = () => {
       {/* What is an RDP Server */}
       <section className="py-20 bg-gradient-to-b from-card via-background to-card relative overflow-hidden">
         <div className="absolute top-1/2 right-0 w-64 h-64 bg-secondary/5 rounded-full blur-[100px]" />
-        
+
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             {/* Image */}
             <div className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-60" />
-              <img 
-                src={resourcesRdp} 
-                alt="RDP Server Access" 
+              <img
+                src={resourcesRdp}
+                alt="RDP Server Access"
                 className="relative rounded-2xl shadow-elegant w-full h-96 object-cover group-hover:scale-[1.02] transition-transform duration-500"
               />
               <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center shadow-lg animate-pulse">
                 <Monitor className="w-8 h-8 text-primary-foreground" />
               </div>
             </div>
-            
+
             {/* Content */}
             <div>
               <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6">
@@ -195,8 +195,8 @@ const Resources = () => {
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {keyBenefits.map((benefit, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="p-6 rounded-2xl bg-gradient-to-br from-card via-background to-card border border-border/50 shadow-card hover:shadow-elegant transition-all duration-500 hover:-translate-y-2 group"
                 >
                   <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${benefit.color} flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform`}>
@@ -240,7 +240,7 @@ const Resources = () => {
           {/* CTA Button */}
           <div className="text-center">
             <Link to="/server-info">
-              <Button 
+              <Button
                 variant="hero"
                 size="xl"
                 className="group relative overflow-hidden btn-ripple glow-primary shadow-2xl"
@@ -258,7 +258,7 @@ const Resources = () => {
       {/* How to Choose the Best RDP Server */}
       <section className="py-20 bg-gradient-to-b from-background via-card to-background relative overflow-hidden">
         <div className="absolute top-1/4 left-0 w-48 h-48 bg-golden/5 rounded-full blur-[80px]" />
-        
+
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -271,8 +271,8 @@ const Resources = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {howToChoose.map((item, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="p-6 rounded-2xl bg-gradient-to-br from-card via-background to-card border border-border/50 shadow-card hover:shadow-elegant transition-all duration-500 hover:-translate-y-2 group"
               >
                 <div className="flex items-center gap-3 mb-4">
@@ -303,15 +303,15 @@ const Resources = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10" />
         <div className="absolute top-0 left-1/3 w-64 h-64 bg-primary/10 rounded-full blur-[100px]" />
         <div className="absolute bottom-0 right-1/3 w-48 h-48 bg-accent/10 rounded-full blur-[80px]" />
-        
+
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <div className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-r from-accent/30 to-golden/30 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-60" />
-              <img 
-                src={resourcesStart} 
-                alt="Get Started Today" 
+              <img
+                src={resourcesStart}
+                alt="Get Started Today"
                 className="relative rounded-2xl shadow-elegant w-full h-96 object-cover group-hover:scale-[1.02] transition-transform duration-500"
               />
               <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-accent to-golden text-foreground px-6 py-3 rounded-xl shadow-lg flex items-center gap-2">
@@ -319,7 +319,7 @@ const Resources = () => {
                 <span className="font-bold">Start Today</span>
               </div>
             </div>
-            
+
             {/* Content */}
             <div className="p-8 rounded-3xl glass-card border border-border/30 shadow-elegant">
               <div className="flex items-center gap-3 mb-6">
@@ -330,14 +330,14 @@ const Resources = () => {
                   Get Started <span className="bg-gradient-to-r from-accent to-golden bg-clip-text text-transparent">Today</span>
                 </h2>
               </div>
-              
+
               <p className="text-muted-foreground mb-8 text-lg">
                 Want to host your own secure RDP Server? We're here to help you get started!
               </p>
-              
+
               <div className="flex flex-wrap gap-4">
                 <Link to="/contact-us">
-                  <Button 
+                  <Button
                     variant="heroOutline"
                     size="lg"
                     className="group backdrop-blur-md hover:backdrop-blur-lg transition-all duration-500 border-2"
@@ -346,7 +346,7 @@ const Resources = () => {
                   </Button>
                 </Link>
                 <Link to="/server">
-                  <Button 
+                  <Button
                     variant="hero"
                     size="lg"
                     className="group relative overflow-hidden btn-ripple glow-primary shadow-2xl"
@@ -358,7 +358,7 @@ const Resources = () => {
                   </Button>
                 </Link>
               </div>
-              
+
               <p className="text-muted-foreground mt-6 text-sm">
                 Join our Server Initiative to get a <span className="text-primary font-semibold">free demo</span> today!
               </p>

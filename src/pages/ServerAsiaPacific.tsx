@@ -13,50 +13,50 @@ const ServerAsiaPacific = () => {
   }, []);
 
   const locations = [
-    { 
-      city: "Singapore", 
+    {
+      city: "Singapore",
       region: "Southeast Asia Hub",
       latency: "< 3ms",
       features: ["Financial Hub", "Premium Tier-1", "24/7 Support"],
       flag: "🇸🇬"
     },
-    { 
-      city: "Tokyo", 
+    {
+      city: "Tokyo",
       region: "Japan - East",
       latency: "< 5ms",
       features: ["Gaming Optimized", "Ultra Low Latency", "Enterprise Grade"],
       flag: "🇯🇵"
     },
-    { 
-      city: "Osaka", 
+    {
+      city: "Osaka",
       region: "Japan - West",
       latency: "< 6ms",
       features: ["Disaster Recovery", "Business Continuity", "High Availability"],
       flag: "🇯🇵"
     },
-    { 
-      city: "Seoul", 
+    {
+      city: "Seoul",
       region: "South Korea",
       latency: "< 4ms",
       features: ["K-Gaming Hub", "Fastest Network", "5G Ready"],
       flag: "🇰🇷"
     },
-    { 
-      city: "Jakarta", 
+    {
+      city: "Jakarta",
       region: "Indonesia",
       latency: "< 8ms",
       features: ["Emerging Market", "Local Compliance", "Growing Hub"],
       flag: "🇮🇩"
     },
-    { 
-      city: "Sydney", 
+    {
+      city: "Sydney",
       region: "Australia - East",
       latency: "< 10ms",
       features: ["Oceania Hub", "Enterprise Ready", "Premium Support"],
       flag: "🇦🇺"
     },
-    { 
-      city: "Melbourne", 
+    {
+      city: "Melbourne",
       region: "Australia - South",
       latency: "< 12ms",
       features: ["Business Center", "Data Sovereignty", "High Security"],
@@ -84,9 +84,9 @@ const ServerAsiaPacific = () => {
     <main className="min-h-screen relative overflow-hidden">
       <FloatingParticles />
       <Navbar />
-      
+
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-24">
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-32">
         <div className="absolute inset-0">
           <img src={serverHero} alt="Asia Pacific Server" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/85 to-foreground/70" />
@@ -95,7 +95,7 @@ const ServerAsiaPacific = () => {
         <div className="absolute top-20 left-20 w-72 h-72 bg-accent/40 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-pulse delay-1000" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/15 rounded-full blur-3xl" />
-        
+
         <div className="absolute top-32 right-32 w-4 h-4 bg-accent rounded-full animate-bounce delay-300" />
         <div className="absolute bottom-40 left-40 w-3 h-3 bg-primary rounded-full animate-bounce delay-500" />
 
@@ -103,14 +103,14 @@ const ServerAsiaPacific = () => {
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accent/30 to-primary/30 backdrop-blur-md rounded-full border border-accent/40 mb-8 shadow-lg shadow-accent/20">
             <span className="text-accent font-bold text-lg">🌏 Asia Pacific Region</span>
           </div>
-          
+
           <h1 className="text-6xl md:text-8xl font-display font-bold text-white mb-8">
             Asia Pacific <span className="text-gradient-warm drop-shadow-lg">Premium Server</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-10 leading-relaxed">
             High-performance hosting across <span className="text-accent font-semibold">7 strategic locations</span> optimized for the dynamic Asia-Pacific market
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link to="/server-info">
               <Button variant="hero" size="lg" className="group text-lg px-8 py-6 shadow-2xl shadow-primary/30">
@@ -131,7 +131,7 @@ const ServerAsiaPacific = () => {
           <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl" />
         </div>
-        
+
         <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
 
         <div className="container mx-auto px-4 relative z-10">
@@ -149,14 +149,14 @@ const ServerAsiaPacific = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {locations.map((location, index) => (
-  <Link
-    key={index}
-    to="/server-info"
-    className="group relative block p-8 rounded-3xl bg-gradient-to-br from-card via-card/80 to-background border border-border/50 hover:border-primary/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-primary/20 overflow-hidden"
-  >
+              <Link
+                key={index}
+                to="/server-info"
+                className="group relative block p-8 rounded-3xl bg-gradient-to-br from-card via-card/80 to-background border border-border/50 hover:border-primary/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-primary/20 overflow-hidden"
+              >
 
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
+
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-3xl">{location.flag}</span>
@@ -164,10 +164,10 @@ const ServerAsiaPacific = () => {
                       {location.latency}
                     </span>
                   </div>
-                  
+
                   <h3 className="text-xl font-bold mb-1 group-hover:text-accent transition-colors">{location.city}</h3>
                   <p className="text-muted-foreground text-sm mb-4">{location.region}</p>
-                  
+
                   <div className="space-y-2">
                     {location.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-sm">
@@ -202,7 +202,7 @@ const ServerAsiaPacific = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div 
+              <div
                 key={index}
                 className="group p-8 rounded-3xl bg-gradient-to-br from-card to-background border border-border/50 hover:border-accent/40 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-accent/15"
               >
@@ -220,7 +220,7 @@ const ServerAsiaPacific = () => {
       {/* Specs Section */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-accent/5 via-transparent to-primary/5" />
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
@@ -234,7 +234,7 @@ const ServerAsiaPacific = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {specs.map((spec, index) => (
-                <div 
+                <div
                   key={index}
                   className="flex items-center gap-4 p-6 rounded-2xl bg-gradient-to-br from-card to-card/50 border border-border/30 backdrop-blur-sm hover:border-accent/30 transition-all duration-300 hover:shadow-lg group"
                 >

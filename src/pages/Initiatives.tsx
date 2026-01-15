@@ -79,26 +79,26 @@ const Initiatives = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
+
       {/* Hero Section - Full Screen Like About Us */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image with Parallax Effect */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src={initiativesHero} 
-            alt="Digital empowerment and learning" 
+          <img
+            src={initiativesHero}
+            alt="Digital empowerment and learning"
             className="w-full h-full object-cover scale-110 animate-[scale-in_1.5s_ease-out_forwards]"
           />
           {/* Multi-layer Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/30 to-foreground/80" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-transparent to-accent/20" />
-          
+
           {/* Animated Mesh Gradient */}
           <div className="absolute inset-0 opacity-40">
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary/40 via-transparent to-transparent animate-pulse" />
             <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-accent/30 via-transparent to-transparent animate-pulse" style={{ animationDelay: "1.5s" }} />
           </div>
-          
+
           {/* Animated Glow Orbs */}
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-primary/30 to-accent/20 rounded-full blur-[120px] animate-pulse" />
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-l from-secondary/30 to-golden/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: "1s" }} />
@@ -111,14 +111,14 @@ const Initiatives = () => {
         <div className="absolute bottom-32 left-16 w-12 h-12 bg-gradient-to-br from-primary/40 to-secondary/30 rounded-full floating-fast" />
         <div className="absolute top-1/3 right-1/4 w-6 h-6 bg-golden/50 rounded-full floating animate-pulse" />
         <div className="absolute bottom-1/4 left-1/3 w-4 h-4 bg-accent/40 rounded-full floating-slow" />
-        
+
         {/* Floating Stars */}
         <Star className="absolute top-1/4 right-[20%] w-6 h-6 text-golden/40 floating-slow animate-pulse" />
         <Star className="absolute bottom-1/3 left-[15%] w-4 h-4 text-primary-foreground/30 floating" />
         <Zap className="absolute top-[40%] left-[10%] w-5 h-5 text-accent/30 floating-fast" />
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20">
+        <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-32">
           {/* Animated Badge */}
           <div className="inline-flex items-center gap-3 px-8 py-3 rounded-full glass-card mb-8 animate-fade-up border border-primary-foreground/20 shadow-2xl">
             <Sparkles className="w-5 h-5 text-golden animate-pulse" />
@@ -128,7 +128,7 @@ const Initiatives = () => {
             <Sparkles className="w-5 h-5 text-golden animate-pulse" />
           </div>
 
-          <h1 
+          <h1
             className="font-display text-5xl md:text-7xl lg:text-9xl font-black mb-8 animate-fade-up tracking-tight"
             style={{ animationDelay: "0.1s" }}
           >
@@ -138,16 +138,16 @@ const Initiatives = () => {
             </span>
           </h1>
 
-          <p 
+          <p
             className="max-w-2xl mx-auto text-lg md:text-xl opacity-90 mb-12 font-light animate-fade-up leading-relaxed text-primary-foreground/90"
             style={{ animationDelay: "0.2s" }}
           >
-            Empowering communities through digital access. 
+            Empowering communities through digital access.
             Free RDP servers for students, NGOs, and changemakers.
           </p>
 
           {/* Stats Preview */}
-          <div 
+          <div
             className="mt-10 grid grid-cols-3 gap-6 max-w-xl mx-auto animate-fade-up"
             style={{ animationDelay: "0.5s" }}
           >
@@ -156,8 +156,8 @@ const Initiatives = () => {
               { number: "24/7", label: "Support", icon: "💬" },
               { number: "100%", label: "Secure", icon: "🔒" },
             ].map((stat) => (
-              <div 
-                key={stat.label} 
+              <div
+                key={stat.label}
                 className="group text-center p-4 rounded-2xl glass-card hover:bg-primary-foreground/10 transition-all duration-500 cursor-pointer hover:scale-105 border border-primary-foreground/10"
               >
                 <div className="text-2xl mb-2 group-hover:animate-bounce-soft">{stat.icon}</div>
@@ -181,7 +181,7 @@ const Initiatives = () => {
         {/* Background Decorations */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[150px]" />
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent/5 rounded-full blur-[120px]" />
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             {/* Main Title */}
@@ -197,23 +197,23 @@ const Initiatives = () => {
             {/* Features with Images */}
             <div className="space-y-16 mb-16">
               {features.map((feature, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center`}
                 >
                   {/* Image */}
                   <div className="w-full md:w-1/2 relative group">
                     <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 to-accent/30 rounded-3xl blur-xl opacity-0 group-hover:opacity-60 transition-all duration-500" />
                     <div className="relative overflow-hidden rounded-2xl shadow-elegant">
-                      <img 
-                        src={feature.image} 
+                      <img
+                        src={feature.image}
                         alt={feature.title}
                         className="w-full h-64 md:h-80 object-cover transform group-hover:scale-105 transition-transform duration-700"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent" />
                     </div>
                   </div>
-                  
+
                   {/* Content */}
                   <div className="w-full md:w-1/2">
                     <div className="flex items-center gap-3 mb-4">
@@ -237,9 +237,9 @@ const Initiatives = () => {
             {/* Apply Button */}
             <div className="text-center mb-16">
               <Link to="/server-info">
-                <Button 
+                <Button
                   variant="hero"
-                  size="xl" 
+                  size="xl"
                   className="group relative overflow-hidden btn-ripple glow-primary shadow-2xl"
                 >
                   <span className="relative z-10 flex items-center gap-3">
@@ -303,8 +303,8 @@ const Initiatives = () => {
                 <span className="text-muted-foreground">Contact our support team for guidance on setting up and using your RDP access effectively.</span>
               </p>
               <Link to="/contact-us">
-                <Button 
-                  variant="heroOutline" 
+                <Button
+                  variant="heroOutline"
                   size="lg"
                   className="group backdrop-blur-md hover:backdrop-blur-lg transition-all duration-500 border-2"
                 >
