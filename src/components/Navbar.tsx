@@ -15,10 +15,10 @@ const Navbar = () => {
   const [mobileServerOpen, setMobileServerOpen] = useState(false);
 
   const serverLocations = [
-    { name: "🇺🇸 USA", href: "/server/usa" },
+    { name: "🌏 USA", href: "/server/usa" },
     { name: "🌏 Asia Pacific", href: "/server/asia-pacific" },
-    { name: "🇮🇳 India", href: "/server/india" },
-    { name: "🇪🇺 Europe", href: "/server/europe" },
+    { name: "🌏 India", href: "/server/india" },
+    { name: "🌏 Europe", href: "/server/europe" },
     { name: "🌍 Middle East", href: "/server/middle-east" },
     { name: "🌎 South America", href: "/server/south-america" },
     { name: "🌍 Africa", href: "/server/africa" },
@@ -49,7 +49,7 @@ const Navbar = () => {
               alt="La Herpaile Logo" 
               className="w-20 h-20 object-contain group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 drop-shadow-lg"
             />
-            <span className="font-display text-2xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+            <span className="font-display text-3xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
               La Herpaile
             </span>
           </Link>
@@ -67,32 +67,47 @@ const Navbar = () => {
                 </Link>
               ))}
               
-              {/* Server Dropdown */}
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <button className="relative px-5 py-2 text-base font-extrabold transition-all duration-300 rounded-full hover:bg-primary/10 text-muted-foreground hover:text-primary flex items-center gap-1 outline-none">
-                    Server
-                    <ChevronDown className="w-4 h-4" />
-                  </button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent 
-                  align="center" 
-                  className="w-56 bg-white border border-primary/10 shadow-xl z-[100] p-2"
-                  sideOffset={8}
-                >
-                  {serverLocations.map((location) => (
-                    <DropdownMenuItem key={location.name} asChild>
-                      <Link
-                        to={location.href}
-                        className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10 cursor-pointer transition-all duration-300 font-semibold text-foreground hover:text-primary"
-                      >
-                        <Globe className="w-4 h-4 text-primary" />
-                        {location.name}
-                      </Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
+              <div className="relative flex items-center">
+
+  {/* Server text */}
+  <Link
+    to="/server"
+    className="text-base font-extrabold text-muted-foreground hover:text-primary transition-all duration-300"
+  >
+    Server
+  </Link>
+
+  {/* Dropdown arrow */}
+  <DropdownMenu>
+    <DropdownMenuTrigger asChild>
+      <span className="ml-1 cursor-pointer flex items-center">
+        <ChevronDown className="w-4 h-4 text-muted-foreground hover:text-primary" />
+      </span>
+    </DropdownMenuTrigger>
+
+    <DropdownMenuContent
+      align="center"
+      sideOffset={8}
+      className="w-56 bg-white border border-primary/10 shadow-2xl z-[100] p-2 rounded-xl"
+    >
+      {serverLocations.map((location) => (
+        <DropdownMenuItem key={location.name} asChild>
+          <Link
+            to={location.href}
+            className="flex items-center gap-3 px-4 py-3 rounded-lg
+                       hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10
+                       transition-all duration-300 font-semibold
+                       text-foreground hover:text-primary"
+          >
+            {location.name}
+          </Link>
+        </DropdownMenuItem>
+      ))}
+    </DropdownMenuContent>
+
+  </DropdownMenu>
+</div>
+
 
               {navLinks.slice(1).map((link) => (
                 <Link
@@ -165,7 +180,7 @@ const Navbar = () => {
                     }}
                     className="flex items-center gap-3 text-muted-foreground hover:text-primary font-semibold py-2 px-4 rounded-lg hover:bg-primary/10 transition-all duration-300"
                   >
-                    <Globe className="w-4 h-4 text-primary" />
+                     
                     {location.name}
                   </Link>
                 ))}

@@ -69,19 +69,19 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 mb-16">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center gap-3 mb-6 group w-fit">
-              <div className="relative">
-                <div className="absolute inset-0 bg-black/5 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <img
-                  src={logoIcon}
-                  alt="La Herpaile Logo"
-                  className="w-16 h-16 object-contain relative z-10 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500"
-                />
-              </div>
-              <span className="font-display text-2xl md:text-3xl font-bold text-black">
-                La Herpaile
-              </span>
-            </Link>
+            <Link 
+            to="/" 
+            className="flex items-center gap-2 group"
+          >
+            <img 
+              src={logoIcon} 
+              alt="La Herpaile Logo" 
+              className="w-20 h-20 object-contain group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 drop-shadow-lg"
+            />
+            <span className="font-display text-3xl font-bold text-black">
+              La Herpaile
+            </span>
+          </Link>
             <p className="text-black/80 text-base mb-8 leading-relaxed max-w-sm font-medium">
               La Herpaile is a dedicated animal welfare
               organization committed to rescuing, rehabilitating, and rehoming animals in need.
