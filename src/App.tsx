@@ -43,6 +43,8 @@ import Donate from "./pages/Donate";
 import OurWork from "./pages/OurWork";
 import Resources from "./pages/Resources";
 import Impact from "./pages/Impact";
+import Blog from "./pages/Blog";
+import BlogArticle from "./pages/BlogArticle";
 
 const queryClient = new QueryClient();
 
@@ -72,6 +74,8 @@ const App = () => (
           <Route path="/our-work" element={<OurWork />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/impact" element={<Impact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogArticle />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

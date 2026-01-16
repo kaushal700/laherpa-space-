@@ -15,10 +15,10 @@ const Navbar = () => {
   const [mobileServerOpen, setMobileServerOpen] = useState(false);
 
   const serverLocations = [
-    { name: "🌏 USA", href: "/server/usa" },
+    { name: "🇺🇸 USA", href: "/server/usa" },
     { name: "🌏 Asia Pacific", href: "/server/asia-pacific" },
-    { name: "🌏 India", href: "/server/india" },
-    { name: "🌏 Europe", href: "/server/europe" },
+    { name: "🇮🇳 India", href: "/server/india" },
+    { name: "🇪🇺 Europe", href: "/server/europe" },
     { name: "🌍 Middle East", href: "/server/middle-east" },
     { name: "🌎 South America", href: "/server/south-america" },
     { name: "🌍 Africa", href: "/server/africa" },
@@ -27,6 +27,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
+    { name: "Blog", href: "/blog" },
     { name: "Initiatives", href: "/initiatives" },
     { name: "Volunteer", href: "/volunteer" },
     { name: "Contact Us", href: "/contact" },
@@ -48,7 +49,7 @@ const Navbar = () => {
               alt="La Herpaile Logo" 
               className="w-20 h-20 object-contain group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 drop-shadow-lg"
             />
-            <span className="font-display text-3xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+            <span className="font-display text-2xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
               La Herpaile
             </span>
           </Link>
@@ -85,7 +86,7 @@ const Navbar = () => {
                         to={location.href}
                         className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10 cursor-pointer transition-all duration-300 font-semibold text-foreground hover:text-primary"
                       >
-                        
+                        <Globe className="w-4 h-4 text-primary" />
                         {location.name}
                       </Link>
                     </DropdownMenuItem>
@@ -164,7 +165,7 @@ const Navbar = () => {
                     }}
                     className="flex items-center gap-3 text-muted-foreground hover:text-primary font-semibold py-2 px-4 rounded-lg hover:bg-primary/10 transition-all duration-300"
                   >
-                    
+                    <Globe className="w-4 h-4 text-primary" />
                     {location.name}
                   </Link>
                 ))}
