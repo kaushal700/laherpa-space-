@@ -366,10 +366,10 @@ const Volunteer = () => {
               <p className="text-muted-foreground">
                 Have A Questions? Email us at:{" "}
                 <a 
-                  href="mailto:support@laherpa.space" 
+                  href="mailto:sadmin@laherpa.space" 
                   className="text-primary hover:text-accent underline underline-offset-4 transition-colors"
                 >
-                  support@laherpa.space
+                 admin@laherpa.space
                 </a>
               </p>
             </div>

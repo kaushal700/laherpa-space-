@@ -142,10 +142,10 @@ const ContactUs = () => {
                   <div>
                     <span className="font-semibold text-foreground block">Email</span>
                     <a
-                      href="mailto:support@laherpa.space"
+                      href="mailto:admin@laherpa.space"
                       className="text-primary hover:text-accent underline underline-offset-4 transition-colors"
                     >
-                      support@laherpa.space
+                      admin@laherpa.space
                     </a>
                   </div>
                 </li>
