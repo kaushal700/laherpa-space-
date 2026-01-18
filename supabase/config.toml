@@ -1,1 +1,4 @@
 project_id = "uduamtryrnvzbvkssdjz"
+
+[functions.send-rdp-notification]
+verify_jwt = false
